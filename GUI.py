@@ -9,7 +9,7 @@ root.title("AI Text Detector")
 #Disable the resizable property 
 root.resizable(False, False) 
 
-textArea = Text(height = 15, width = 60, font = ("arial", 10))  
+textArea = Text(height = 15, width = 60)  
 
 def submit(): 
     #paramters: 
@@ -20,7 +20,8 @@ def submit():
 
 def clearText(): 
     textArea.delete("1.0", "end")
-    
+
+#loads AI text into text Area 
 def aiText(): 
 		clearText()
 		try: 
@@ -30,6 +31,7 @@ def aiText():
 		except Exception as e: 
 			print(e)  
 
+#loads human text into textArea 
 def humanText(): 
 		clearText()
 		try: 
@@ -39,7 +41,7 @@ def humanText():
 		except Exception as e: 
 			print(e)    
 			
-
+#widget creation 
 heading = Label(text = "AI TEXT DETECTOR", font = "Monospace 30 bold")
 examples = Label(text = "Examples: ", font = "Monospace 20")
 aiExample = Button(text = "AI", height = 2, width = 10, command = aiText)
