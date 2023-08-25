@@ -25,7 +25,7 @@ def clearText():
 def aiText(): 
 		clearText()
 		try: 
-			with open("AI_Text_Detector/examples/aitxt.TXT") as file: 
+			with open("examples/aitxt.TXT") as file: 
 				text = file.read()
 				textArea.insert(END, text) 
 		except Exception as e: 
@@ -35,7 +35,7 @@ def aiText():
 def humanText(): 
 		clearText()
 		try: 
-			with open("AI_Text_Detector/examples/humantxt.TXT") as file: 
+			with open("examples/humantxt.TXT") as file: 
 				text = file.read()
 				textArea.insert(END, text) 
 		except Exception as e: 
