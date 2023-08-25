@@ -4,12 +4,12 @@ percent = 0
 #create root window 
 root = Tk()
 #dimensions of window and title
-root.geometry("450x540")
-root.title("AI Text Detector")
+root.geometry("550x560")
+root.title("AI Content Detector")
 #Disable the resizable property 
 root.resizable(False, False) 
 
-textArea = Text(height = 15, width = 60, font = "Arial 10" )  
+textArea = Text(height = 15, width = 75, font = "Arial 10" )  
 
 def submit(): 
     #paramters: 
@@ -42,7 +42,7 @@ def humanText():
 			print(e)    
 			
 #widget creation 
-heading = Label(text = "AI TEXT DETECTOR", font = "Monospace 30 bold")
+heading = Label(text = "AI CONTENT DETECTOR", font = "Monospace 30 bold")
 examples = Label(text = "Examples: ", font = "Monospace 20")
 aiExample = Button(text = "AI", height = 2, width = 10, command = aiText)
 humanExample = Button(text = "Human", height = 2, width = 10, command = humanText)
@@ -54,9 +54,9 @@ scrollbar = Scrollbar()
 
 #geometry management 
 heading.grid(row = 0, column = 0, pady = 2, padx = 10) 
-examples.grid(row = 1, column = 0, padx = 10, sticky = W) 
-aiExample.grid(row = 1, column = 0, padx = 120, sticky = E) 
-humanExample.grid(row = 1, column = 0, padx = 20, sticky = E) 
+examples.grid(row = 1, column = 0, pady = 10,  padx = 10, sticky = W) 
+aiExample.grid(row = 1, column = 0, pady = 10, padx = 100, sticky = E) 
+humanExample.grid(row = 1, column = 0, pady = 10, padx = 10, sticky = E) 
 textArea.grid(row = 2, column = 0, pady = 20, padx = 10)
 clearBtn.grid(row = 3, column = 0, padx = 100, sticky = E)
 submitBtn.grid(row = 3, column = 0, padx = 10, sticky = E)  
