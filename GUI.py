@@ -9,7 +9,7 @@ root.title("AI Text Detector")
 #Disable the resizable property 
 root.resizable(False, False) 
 
-textArea = Text(height = 15, width = 60)  
+textArea = Text(height = 15, width = 60, font = "Arial 10" )  
 
 def submit(): 
     #paramters: 
