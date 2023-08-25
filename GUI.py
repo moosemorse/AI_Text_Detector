@@ -9,7 +9,8 @@ root.title("AI Text Detector")
 
 heading = Label(text = "AI TEXT DETECTOR", font = ("Monospace", 30))
 
+#place widgets on top of eachother 
+heading.pack(side = TOP)
 
 #code keeps displaying - keeps window open 
-heading.pack()
 mainloop() 
