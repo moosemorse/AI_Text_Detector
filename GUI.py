@@ -8,9 +8,12 @@ root.title("AI Text Detector")
 
 
 heading = Label(text = "AI TEXT DETECTOR", font = ("Monospace", 30))
+enterText = Entry() 
+textArea = Text(height = 5, width = 25, font = ("arial", 10)) 
 
 #place widgets on top of eachother 
-heading.pack(side = TOP)
-
+heading.pack()
+enterText.pack()
+textArea.pack() 
 #code keeps displaying - keeps window open 
 mainloop() 
