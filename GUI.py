@@ -19,16 +19,35 @@ def submit():
     print(textArea.get("1.0", "end-1c")) 
 
 def clearText(): 
-    textArea.delete("1.0", "end") 
+    textArea.delete("1.0", "end")
+    
+def aiText(): 
+		clearText()
+		try: 
+			with open("AI_Text_Detector/examples/aitxt.TXT") as file: 
+				text = file.read()
+				textArea.insert(END, text) 
+		except Exception as e: 
+			print(e)  
+
+def humanText(): 
+		clearText()
+		try: 
+			with open("AI_Text_Detector/examples/humantxt.TXT") as file: 
+				text = file.read()
+				textArea.insert(END, text) 
+		except Exception as e: 
+			print(e)    
+			
 
 heading = Label(text = "AI TEXT DETECTOR", font = "Monospace 30 bold")
 examples = Label(text = "Examples: ", font = "Monospace 20")
-aiExample = Button(text = "AI", height = 2, width = 10)
-humanExample = Button(text = "Human", height = 2, width = 10)
+aiExample = Button(text = "AI", height = 2, width = 10, command = aiText)
+humanExample = Button(text = "Human", height = 2, width = 10, command = humanText)
 submitBtn = Button(text = "Submit", bg = "#04AA6D", height = 2, width = 10, command=submit)
 clearBtn = Button(text = "Clear", height = 2, width = 10, command =clearText)
 percentage = Label(text = str(percent) + " %", font = ("Monospace", 30))
-scrollbar = Scrollbar(bg = "light gray") 
+scrollbar = Scrollbar() 
 
 
 #geometry management 
