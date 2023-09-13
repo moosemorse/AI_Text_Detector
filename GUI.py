@@ -25,8 +25,10 @@ def submit():
 
 
 def clearText(): 
-    textArea.delete("1.0", "end") 
-
+	textArea.delete("1.0", "end") 
+	global percentage 
+	percentage.config(text="0 %")
+	
 #loads AI text into text Area 
 def aiText(): 
 		clearText()
