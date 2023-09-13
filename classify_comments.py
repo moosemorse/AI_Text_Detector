@@ -24,6 +24,7 @@ def classify_text(text):
     #final result in form of tensor 
     #cast tensor into int 
     final_result = final_result[1].item() 
+    final_result = 1 - final_result
 
     return final_result
 
