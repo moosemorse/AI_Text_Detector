@@ -21,11 +21,11 @@ def submit():
 	global percent 
 	percent = int(100 * classify_text(textArea.get("1.0", "end-1c"))); 
 	global percentage 
-	percentage = Label(text = str(percent) + " %", font = ("Monospace", 30))
+	percentage.config(text=str(percent) + "% chance of AI-generated")
 
 
 def clearText(): 
-    textArea.delete("1.0", "end")
+    textArea.delete("1.0", "end") 
 
 #loads AI text into text Area 
 def aiText(): 
