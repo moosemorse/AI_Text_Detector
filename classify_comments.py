@@ -21,5 +21,9 @@ def classify_text(text):
         logits = model(**token_text)
         final_result = torch.sigmoid(torch.Tensor(logits)) 
     
-    return final_result[1] 
+    #final result in form of tensor 
+    #cast tensor into int 
+    final_result = final_result[1].item() 
+
+    return final_result
 
