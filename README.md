@@ -1,6 +1,6 @@
 # AI Text Detector
 
-Welcome to the AI Text Detector project! This repository contains the source code for an AI-generated text detector developed using machine learning techniques. The project is part of a design project for the Gold CREST award.
+Welcome to the AI Text Detector project! This repository contains the source code for an AI-generated text detector developed using machine learning techniques. The project is part of a design project for the Gold CREST award. Find 'GoldCrestWriteUp.pdf' for the official report I wrote alongside this project.
 
 ## Table of Contents
 
